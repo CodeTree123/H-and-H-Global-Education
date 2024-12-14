@@ -1,0 +1,202 @@
+.nav-item a {
+    color: #00237D;
+    font-weight: bold;
+}
+.nav-item a:hover {
+    color: red;
+    font-weight: #D0142C;
+
+}
+
+/* top bar */
+ /* Topbar styles */
+ .topbar {
+    background-color: #00237D;
+    color: white;
+    font-size: 14px;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+.topbar .contact-info {
+    font-size: 16px;
+}
+.topbar .social-icons a {
+    color: white;
+    margin-left: 10px;
+}
+.topbar .social-icons a:hover {
+    color: #D0142C;
+}
+.topbar .btn-book-meeting {
+    background-color: #D0142C;
+    color: white;
+    /* border-radius: 20px; */
+    padding: 5px 15px;
+    margin-left: 15px;
+}
+.topbar .btn-book-meeting:hover {
+    background-color: #00237D;
+    color: white;
+}
+
+/* Navbar styles */
+/* @media (max-width: 768px){
+    nav.navbar {
+        margin-top: 75px; 
+    }
+} */
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .topbar .contact-info {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .topbar .social-icons {
+        text-align: center;
+    }
+}
+
+
+/* banner video */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(208, 20, 44, 0.5), rgba(0, 35, 125, 0.5)); /* Gradient with transparency */
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.banner-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1;
+    padding: 1rem;
+    text-align: center;
+}
+
+.text-background {
+    /* background: rgba(0, 0, 0, 0.5);  */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: inline-block; /* Adjust width to fit content */
+    width: 100%;
+}
+
+.banner-caption h1 {
+    font-size: 3rem; /* Adjust font size as needed */
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.banner-caption p {
+    font-size: 1.25rem; /* Slightly smaller text */
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem; /* Adjust gap between buttons */
+    justify-content: center; /* Center buttons horizontally */
+}
+
+.button-container a.btn {
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-container a.btn.btn-light {
+    background-color: #ffffff; /* Light button color */
+    color: #000000; /* Dark text color */
+}
+
+.button-container a.btn.btn-light:hover {
+    background-color: #f0f0f0; /* Lighter background on hover */
+}
+
+.become-agent {
+    padding: 0.75rem 1.5rem;
+    background-color: #D0142C; /* Button color */
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.become-agent:hover {
+    background-color: #a00f2c; /* Darker shade on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .banner-caption h1 {
+        font-size: 2rem;
+    }
+
+    .banner-caption p {
+        font-size: 1rem;
+    }
+
+    .button-container a.btn, .become-agent {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-caption h1 {
+        font-size: 1.5rem;
+    }
+
+    .banner-caption p {
+        font-size: 0.875rem;
+    }
+
+    .button-container a.btn, .become-agent {
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+
+
+/* chat boot */
+body{width:100%}
+*{margin:0px;padding:0px;box-sizing:border-box;}
+#whats-chat{position:fixed;right:3%;bottom:10%;height:auto;width:auto;background:#25D366;padding:12.5px;border-radius:50px;}
+#whats-chat:hover{cursor:pointer;box-shadow:2px 2px 15px #ccc;bottom:11%;}
+/*===============================*/
+#chat-box{position:fixed;right:-500px;bottom:18%;width:250px;height:200px;transition:all .5s;}
+#chat-top{width:100%;line-height:2;background:rgb(18, 140, 126);color:white;text-align:center;border-radius:5px 5px 0 0;padding:0 10px;}
+#chat-msg{background:#ece5dd;padding:10px;border-radius:0 0 5px 5px;box-shadow:0 0 25px -10px #999;}
+#chat-msg p{font-size:14px;padding:5px;background:white;border-radius:0 50px 50px 50px;margin-bottom:10px;}
+#chat-form{display:flex;}
+.chat-in{width:80%;}
+#chat-form input{border-radius:5px 0 5px 5px;border:none;outline:none;font-size:14px;padding:5px;line-height:2;}
+#send-btn{width:20%;padding: 0 5px;}
+#chat-top-right{float:right;padding:5px 0;}
+#chat-box:after{content:'';
+    position: absolute;
+    top:58%;
+    left: 90%;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent; 
+  
+  border-right:25px solid #ece5dd;}
+.right{float:right}
+.clear{clear:both}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AHZ Education</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <style>
+        .section-padding {
+            padding: 60px 0;
+        }
+        .banner-img {
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        .slick-slider .slick-prev, .slick-slider .slick-next {
+            background-color: rgba(0, 0, 0, 0.5); /* Arrow background for visibility */
+            border-radius: 50%; /* Circular arrows */
+        }
+        .slick-slider .slick-dots {
+            bottom: -40px; /* Position dots below */
+        }
+        .slick-slide h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .slick-slide p {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Banner Section -->
+<section class="banner-img d-flex align-items-center" style="background-image: url('https://c1.wallpaperflare.com/path/653/576/854/question-mark-pile-question-mark-5406e2c4679972adad9cb00ddadafe9a.jpg');">
+    <div class="container text-center text-white">
+        <h1 class="display-4 fw-bold">Who Are We?</h1>
+        <p class="lead">One of the Fastest-Growing UK Education Consultancies in the World</p>
+        <p class="lead">
+            AHZ exists for one reason: to help students from around the world to fulfil their dreams of studying in the UK.  
+            Based in London, and with offices in 16 countries around the world, we work with over 130 UK institutions to connect you with the perfect university and course.
+        </p>
+    </div>
+</section>
+
+<!-- Slider Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="slick-slider">
+                    <div>
+                        <h3 class="fw-bold text-center">Our History</h3>
+                        <p class="lead text-center">Brief description about the history of the organization.</p>
+                    </div>
+                    <div>
+                        <h3 class="fw-bold text-center">Our Mission & Vision</h3>
+                        <p class="lead text-center">Description of the mission and vision of AHZ.</p>
+                    </div>
+                    <div>
+                        <h3 class="fw-bold text-center">Our Values</h3>
+                        <p class="lead text-center">The principles that guide us every step of the way.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Leadership Team Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="fw-bold">Meet Our Leadership Team</h2>
+                <p class="lead">Meet the dedicated leaders steering AHZ towards success.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="person1.jpg" class="card-img-top" alt="John Doe">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">John Doe</h5>
+                        <p class="card-text">CEO</p>
+                        <p class="text-muted">Brief bio about John Doe.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="person2.jpg" class="card-img-top" alt="Jane Smith">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Jane Smith</h5>
+                        <p class="card-text">CTO</p>
+                        <p class="text-muted">Brief bio about Jane Smith.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more team members as needed -->
+        </div>
+    </div>
+</section>
+
+
+<!-- Our Achievements Section (Slider) -->
+<section class="section-padding">
+    <div class="container text-center">
+        <h2 class="fw-bold">Our Achievements</h2>
+        <p class="lead">Highlighting our successes and milestones.</p>
+        <div class="slick-slider">
+            <div>
+                <img src="achievement1.jpg" class="img-fluid" alt="Achievement 1">
+            </div>
+            <div>
+                <img src="achievement2.jpg" class="img-fluid" alt="Achievement 2">
+            </div>
+            <div>
+                <img src="achievement3.jpg" class="img-fluid" alt="Achievement 3">
+            </div>
+            <div>
+                <img src="achievement4.jpg" class="img-fluid" alt="Achievement 4">
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.slick-slider').slick({
+            infinite: true,  // Enables infinite looping
+            slidesToShow: 1, // Number of slides to show at a time
+            slidesToScroll: 1, // Number of slides to scroll at a time
+            arrows: true,     // Enables navigation arrows
+            dots: true,       // Enables navigation dots
+            autoplay: true,   // Enables automatic sliding
+            autoplaySpeed: 3000, // Time between slides
+        });
+    });
+</script>
+</body>
+</html>
