@@ -45,6 +45,7 @@ class GlobalApplyController extends Controller
 
             // Create and save application
             GlobalApply::create([
+                'course_id'=> $request['course_id'] ?? 0,
                 'first_name' => $validated['first_name'],
                 'last_name' => $validated['last_name'],
                 'date_of_birth' => $validated['date_of_birth'],
@@ -58,14 +59,15 @@ class GlobalApplyController extends Controller
                 'address' => $validated['address'],
                 'english_proficiency' => $validated['english_proficiency'],
                 'visa_refusal' => $validated['visa_refusal'],
+                
             ]);
 
             $notify[] = ['success', 'Application submitted successfully!'];
-            return redirect()->route('apply.show')->withNotify($notify);
+            return back()->withNotify($notify);
         } catch (\Throwable $th) {
             Log::alert($th);
             $notify[] = ['error', 'Something went wrong. Please try again later.'];
-            return redirect()->route('apply.show')->withNotify($notify);
+            return back()->withNotify($notify);
         }
     }
 

@@ -129,6 +129,7 @@
   </a>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <a class="dropdown-item" href="{{ route('why-us.index') }}" >why Us</a>
+    <a class="dropdown-item" href="{{ route('ceo-greetings.index') }}" >CEO From Greetings</a>
   </div>
 </div>
 

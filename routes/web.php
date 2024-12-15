@@ -16,6 +16,7 @@ use App\Http\Controllers\AirportPickupController;
 use App\Http\Controllers\WhyUsController;
 use App\Http\Controllers\MissionController;
 use App\Http\Controllers\UniversityFinderController;
+use App\Http\Controllers\CeoGreetingController;
 
 
 Route::get('/clear', function(){
@@ -438,4 +439,22 @@ Route::delete('/missions/{id}', [MissionController::class, 'destroy'])->name('mi
 
 
 
+// greetings form ceo admin
 
+// Display all records
+Route::get('/ceo-greetings', [CeoGreetingController::class, 'index'])->name('ceo-greetings.index');
+
+// Show form to create a new record
+Route::get('/ceo-greetings/create', [CeoGreetingController::class, 'create'])->name('ceo-greetings.create');
+
+// Store a new record
+Route::post('/ceo-greetings', [CeoGreetingController::class, 'store'])->name('ceo-greetings.store');
+
+// Show form to edit a specific record
+Route::get('/ceo-greetings/{id}/edit', [CeoGreetingController::class, 'edit'])->name('ceo-greetings.edit');
+
+// Update a specific record
+Route::put('/ceo-greetings/{id}', [CeoGreetingController::class, 'update'])->name('ceo-greetings.update');
+
+// Delete a specific record
+Route::delete('/ceo-greetings/{id}', [CeoGreetingController::class, 'destroy'])->name('ceo-greetings.destroy');

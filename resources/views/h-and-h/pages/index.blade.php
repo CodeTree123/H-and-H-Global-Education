@@ -18,12 +18,13 @@
 
 <div class="banner-section" id="banner-section">
     @foreach($banners as $banner)
-    <div class="banner-content" style="background-image: url('{{ asset('storage/' . $banner->image) }}'); background-size: cover; background-position: center; height: 100vh; width: 100%;">
-      <h1 id="slider-heading">{{$banner->title}}</h1>
-      <p id="slider-text">{{$banner->description}}</p>
-      <a href="{{ route('freecounselling.form') }}" class="btn study-button mt-5" style="background-color: #D0142C; color: white; border-radius: 50px;">
-    Book A Free Counselling Session Now 
-</a>
+    <div class="banner-content" style="position: relative; height: 100vh; width: 100%;">
+        <div class="banner-bg" style="background-image: url('{{ asset('storage/' . $banner->image) }}'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; right: 0; bottom: 0; filter: blur(5px); z-index: -1;"></div>
+        <h1 id="slider-heading">{{$banner->title}}</h1>
+        <p id="slider-text">{{$banner->description}}</p>
+        <a href="{{ route('freecounselling.form') }}" class="btn study-button mt-5" style="background-color: #D0142C; color: white; border-radius: 50px;">
+            Book A Free Counselling Session Now 
+        </a>
     </div>
     @endforeach
     <button class="left-arrow">&larr;</button>

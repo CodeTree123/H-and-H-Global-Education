@@ -21,6 +21,7 @@ class GlobalApply extends Model
         'address',
         'english_proficiency',
         'visa_refusal',
+        'course_id',
     ];
 
     /**

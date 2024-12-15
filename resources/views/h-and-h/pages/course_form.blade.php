@@ -60,6 +60,8 @@
             <h2 class="text-center mb-4">Student Form</h2>
             <form id="studentForm" method="POST" action="{{ route('apply.store') }}">
                 @csrf 
+
+            <input type="text" class="d-none" name="course_id" value="{{$course->id}}">
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="firstName" class="form-label required">First Name</label>
@@ -99,14 +101,14 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                     <label for="country" class="form-label required">Country</label>
-            <select class="form-control" id="country" name="country">
+            <select class="form-control" id="country" name="country" readonly>
                     <option value="{{ $course->university->country_id }}">{{ $course->university->country->name }}</option>
             </select>
                     </div>
                     <!-- Institution -->
                     <div class="col-md-6">
                         <label for="course" class="form-label required">University</label>
-                <select class="form-control" id="university" name="university">
+                <select class="form-control" id="university" name="university" readonly>
                     <option value="{{ $course->university->id }}">{{ $course->university->name }}</option>
                 </select>
                     </div>
@@ -116,7 +118,7 @@
                 <div class="row mb-3">
                      <!-- Course Name -->
                      <label for="course" class="form-label required">Course</label>
-            <select class="form-control" id="course" name="course">
+            <select class="form-control" id="course" name="course" readonly>
                     <option value="{{ $course->id }}">{{ $course->name }}</option>
             </select>
                     <div class="col-md-6 mt-3">

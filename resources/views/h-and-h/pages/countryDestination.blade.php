@@ -101,6 +101,24 @@
             flex: 1; /* Equal flex-grow for items */
             min-width: 50%; /* Two items visible */
         }
+
+        .slider-item {
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px; /* Add spacing between items */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.slider-item:hover {
+    transform: scale(1.05);
+}
+.slider img {
+    border-radius: 8px;
+}
+
     </style>
 
 
@@ -115,32 +133,35 @@
 <br>
 <br>
         <h3>Universities We Partner With</h3>
-
-        <div class="university-listing text-black">
-            <div class="row">
-            @foreach($country->universities as $university)
-                <div class="col-md-6 mb-3">
-                    <div class="card h-100 shadow hover-effect">
-
-
-                        <img src="{{ asset('banners/' . $university->university_banner) }}" 
-                             class="card-img-top" 
-                             alt="{{ $university->name }}">
-
-
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $university->name }}</h5>
-                            <!-- <p class="card-text">{{ $university->about_text }}</p> -->
-
-                            <a style="width:200px" href="{{ route('university.show',$university->id) }}" class="btn btn-primary  mt-3">Learn More</a>
+        <div class="university-carousel my-5">
+            <h3 class="text-center mb-4">Universities We Partner With</h3>
+            <div class="slider">
+                @foreach($country->universities as $university)
+                    <div class="slider-item">
+                        <div class="card h-100 shadow hover-effect">
+                            <div style="width: 100%; height: 300px; overflow: hidden; border-radius: 8px;">
+                                <img 
+                                    src="{{ asset('banners/' . $university->university_banner) }}" 
+                                    class="card-img-top" 
+                                    alt="{{ $university->name }}" 
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">{{ $university->name }}</h5>
+                                <a style="width:200px" href="{{ route('university.show', $university->id) }}" class="btn btn-primary mt-3">Learn More</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
             </div>
         </div>
+        
+        
+        
+        
+        
 
-        <div class="news-slider">
+    <div class="news-slider">
             <h3>Latest News About Studying in the UK</h3>
             <div class="slider">
                 <div class="slider-item">
@@ -159,7 +180,7 @@
                     <p>A guide to understanding student life and culture in the UK.</p>
                 </div>
             </div>
-        </div>
+        </div> 
         
         <style>
             .slider-item {
@@ -175,7 +196,7 @@
 
         
 
-        <!-- <div class="contact-form">
+ <div class="contact-form">
             <h3>Contact Us</h3>
             <form>
                 <div class="mb-3">
@@ -192,7 +213,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
-        </div> -->
+        </div> 
 
 
 
@@ -216,5 +237,33 @@
                 ]
             });
         });
+
+
+        $(document).ready(function(){
+        $('.slider').slick({
+            slidesToShow: 3,  // Show 3 items at a time
+            slidesToScroll: 1, // Scroll one item at a time
+            dots: true,        // Show dots for navigation
+            arrows: true,      // Show previous/next arrows
+            infinite: true,    // Enable infinite scrolling
+            autoplay: true,    // Enable auto-play
+            autoplaySpeed: 3000, // Change slides every 3 seconds
+            pauseOnHover: true, // Pause auto-play when hovered
+            responsive: [
+                {
+                    breakpoint: 1024, // For tablets and smaller desktops
+                    settings: {
+                        slidesToShow: 2 // Show 2 items
+                    }
+                },
+                {
+                    breakpoint: 768, // For mobile devices
+                    settings: {
+                        slidesToShow: 1 // Show 1 item
+                    }
+                }
+            ]
+        });
+    });
     </script>
 @endsection
