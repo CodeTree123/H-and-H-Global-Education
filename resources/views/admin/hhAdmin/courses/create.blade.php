@@ -54,18 +54,28 @@
                 <input type="text" name="duration" class="form-control">
             </div>
 
-            <div class="mb-3">
-    <label for="pathway_available" class="form-label">Pathway Available</label>
-    <select name="pathway_available" class="form-control" required>
-        <option value="">Select Option</option>
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-    </select>
-</div>
+                        <div class="mb-3">
+                <label for="pathway_available" class="form-label">Pathway Available</label>
+                <select name="pathway_available" class="form-control" required>
+                    <option value="">Select Option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
          
             <div class="mb-3">
                 <label for="price" class="form-label">Price</label>
                 <input type="text" name="price" class="form-control" step="0.01" placeholder="Enter price" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="key_facts" class="form-label">Key Facts</label>
+                <input type="text" name="key_facts" class="form-control" step="0.01" placeholder="Enter Keys" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" name="date" class="form-control" required>
             </div>
 
             <!-- for more info  -->

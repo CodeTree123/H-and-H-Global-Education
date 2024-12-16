@@ -6,8 +6,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="style.css">
-    
-
     <style>
 
         .header {
@@ -132,31 +130,116 @@
 <br>
 <br>
 <br>
-        <h3>Universities We Partner With</h3>
-        <div class="university-carousel my-5">
-            <h3 class="text-center mb-4">Universities We Partner With</h3>
-            <div class="slider">
-                @foreach($country->universities as $university)
-                    <div class="slider-item">
-                        <div class="card h-100 shadow hover-effect">
-                            <div style="width: 100%; height: 300px; overflow: hidden; border-radius: 8px;">
-                                <img 
-                                    src="{{ asset('banners/' . $university->university_banner) }}" 
-                                    class="card-img-top" 
-                                    alt="{{ $university->name }}" 
-                                    style="width: 100%; height: 100%; object-fit: cover;">
-                            </div>
-                            <div class="card-body text-center">
-                                <h5 class="card-title">{{ $university->name }}</h5>
-                                <a style="width:200px" href="{{ route('university.show', $university->id) }}" class="btn btn-primary mt-3">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
+
+<h3 class="mb-5">Universities We Partner With</h3>
+<div class="container my-5">
+    <div class="row gy-4">
+        @foreach($country->universities as $index => $university)
+            <div class="col-12 d-flex flex-column flex-md-row align-items-center mb-4 {{ $index % 2 == 0 ? 'flex-md-row' : 'flex-md-row-reverse' }}" style="padding-top: 20px; padding-bottom: 20px;">
+                <!-- Image Section -->
+                <div class="image-container rounded mb-3 mb-md-0" style="flex: 1; overflow: hidden;">
+                    <img src="{{ asset('banners/' . $university->university_banner) }}" 
+                         alt="{{ $university->name }}"
+                         class="w-100"
+                         style="object-fit: contain; max-height: 100vh;">
+                </div>
+                
+                <!-- Info Section -->
+                <div class="info-container px-4" style="flex: 1; padding-left: 20px;">
+                    <h4 class="fw-bold text-dark mb-2">{{ $university->name }}</h4>
+                    <p class="text-muted mb-3">
+                       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, quisquam voluptates. Odio porro nulla totam, suscipit exercitationem sit adipisci quibusdam omnis quis praesentium assumenda eaque unde dolores! Reprehenderit, odio non nisi rem eaque modi dolorum est, voluptas praesentium debitis odit. Vel unde adipisci quasi, atque eius ipsa iure nemo blanditiis? Lorem, ipsum dolor sit amet consectetur aipisicing elit. Fuga esse natus repellendus dolorem itaque magni officiis porro rem, numquam error.
+                    </p>
+                    <a href="{{ route('university.show', $university->id) }}" class="more-info-button">
+                        More Info
+                    </a>
+                </div>
             </div>
-        </div>
-        
-        
+        @endforeach
+    </div>
+</div>
+ 
+
+
+   <style>
+    /* Image Styling */
+    .image-container {
+        height: 250px; /* Fixed image height */
+        overflow: hidden; /* Prevents showing extra part of the image */
+    }
+
+    .image-container img {
+        object-fit: cover; /* Ensures images are cropped properly */
+        transition: transform 0.3s ease;
+    }
+
+    /* Info Section */
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+    }
+
+    .info-container h4 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .info-container p {
+        font-size: 1rem;
+        color: #777;
+    }
+
+    /* More Info Button Styling */
+    .more-info-button {
+        font-size: 1.2rem;
+        padding: 12px 24px;
+        border: 0.5px solid #d9534f; /* Red border */
+        color: #d9534f; /* Red text */
+        background-color: transparent;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: 600;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .more-info-button:hover {
+        background-color: #d9534f; /* Red background on hover */
+        color: white; /* White text on hover */
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .col-12 {
+            flex-direction: column; /* Stack image and info vertically on mobile */
+        }
+
+        .image-container {
+            margin-bottom: 15px;
+        }
+
+        .info-container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    /* Alternate Layout (Left/Right based on index) */
+    .flex-md-row {
+        flex-direction: row; /* Image on the left, text on the right */
+    }
+
+    .flex-md-row-reverse {
+        flex-direction: row-reverse; /* Image on the right, text on the left */
+    }
+</style>
+
+
+
         
         
         

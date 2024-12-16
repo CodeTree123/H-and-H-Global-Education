@@ -35,22 +35,34 @@ class GreetingsController extends Controller
             'description' => 'required|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-
+        
         $imagePath = null;
-
+    
+        // Check if an image was uploaded
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('greetings', 'public');
+            // Get the uploaded image
+            $image = $request->file('image');
+    
+            // Create a unique image name
+            $imageName = 'greetings/' . uniqid() . '.' . $image->getClientOriginalExtension();
+    
+            $image->move(public_path('storage/greetings'), $imageName);
+    
+            // Set the image path relative to the public folder
+            $imagePath = $imageName;
         }
-
+    
+        // Create the Greeting record
         Greeting::create([
             'title' => $request->title,
             'description' => $request->description,
             'image' => $imagePath,
         ]);
-
+    
+        // Redirect back with success message
         return redirect()->route('greetings.index')->with('success', 'Greeting created successfully!');
     }
-
+    
     /**
      * Show the form for editing the specified greeting.
      */
@@ -74,13 +86,20 @@ class GreetingsController extends Controller
         $greeting = Greeting::findOrFail($id);
 
         if ($request->hasFile('image')) {
-            // Delete old image if it exists
-            if ($greeting->image && Storage::disk('public')->exists($greeting->image)) {
-                Storage::disk('public')->delete($greeting->image);
+            // Delete old image if it exists and is in the public folder
+            if ($greeting->image && file_exists(public_path($greeting->image))) {
+                unlink(public_path($greeting->image));
             }
-
-            $greeting->image = $request->file('image')->store('greetings', 'public');
+        
+            // Store the new image in the 'public/greetings' folder
+            $image = $request->file('image');
+            $imageName = 'storage/greetings/' . uniqid() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('greetings'), $imageName);
+        
+            // Update the greeting with the image path (relative to public folder)
+            $greeting->image = 'storage/greetings/' . $imageName;
         }
+        
 
         $greeting->update([
             'title' => $request->title,

@@ -8,7 +8,6 @@ use App\Models\StudyLevel;
 use Illuminate\Http\Request;
 class CourseController extends Controller
 {
-
     public function index()
     {
         $courses = Course::all();
@@ -33,8 +32,6 @@ class CourseController extends Controller
     }
 
 
-
-
     public function store(Request $request)
     {
         $request->validate([
@@ -47,6 +44,8 @@ class CourseController extends Controller
             'duration' => 'nullable|string',
             'pathway_available' => 'nullable',
             'price' => 'required|string',
+            'date' => 'required|date_format:Y-m-d',
+            'key_facts' => 'required|string',
             'icon' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
     
@@ -131,6 +130,8 @@ class CourseController extends Controller
             'study_level_id' => 'required|exists:study_levels,id',
             'duration' => 'nullable|string',
             'pathway_available' => 'nullable',
+            
+
         ]);
 
         $course = Course::findOrFail($id);
@@ -142,8 +143,6 @@ class CourseController extends Controller
 
     }
 
-
-    
     public function destroy($id)
     {
         $course = Course::findOrFail($id);
@@ -151,9 +150,6 @@ class CourseController extends Controller
 
         return redirect()->route('courses.index')->with('success', 'Course deleted successfully.');
     }
-
-
-
 
     // more info controller
     public function singleCourse($identifier)

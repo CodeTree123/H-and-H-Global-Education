@@ -33,11 +33,13 @@ class CourseFinderController extends Controller
                 'pathway_available',
                 'created_at',
                 'updated_at',
-                'price'
+                'price',
+                'slug'
             ]);
         
         // Get the filtered courses
         $findCourses = $findCoursesQuery->get();
+
             return view('h-and-h.pages.courseFinder', compact(
                 'universities', 
                 'findCourses', 

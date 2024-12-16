@@ -1,5 +1,4 @@
 @extends('admin.layouts.app')
-
 @section('content')
     <div class="container">
         <h1>Edit Course</h1>
@@ -115,6 +114,28 @@
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
             </div>
+
+            <div class="mb-3">
+                <label for="key_facts" class="form-label">Key Fact</label>
+                <input type="text" name="key_facts" class="form-control" value="{{ old('key_facts', $course->key_facts) }}" required>
+                @error('key_facts')
+                    <div class="text-danger mt-1">{{ $message }}</div>
+                @enderror
+            </div>
+            
+
+
+
+            <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" name="date" class="form-control" value="{{ old('date', $course->date) }}" required>
+                @error('date')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+            </div>
+            
+            
+            <!-- Debugging Output -->            
 
             <button type="submit" class="btn btn-primary">Update</button>
         </form>

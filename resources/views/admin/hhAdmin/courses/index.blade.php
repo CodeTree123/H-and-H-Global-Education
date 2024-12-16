@@ -50,12 +50,12 @@
 <div class="table-responsive">
     <table id="bannerTable" class="display nowrap table table-bordered" style="width:100%">
         <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>University</th>
-                <th>Actions</th>
-            </tr>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>University</th>
+            <th>Actions</th>
+        </tr>
         </thead>
         <tbody>
             @foreach($courses as $course)

@@ -24,6 +24,7 @@ use App\Models\StudentCounselling;
 use App\Models\VisaApplication;
 use App\Models\Accommodation;
 use App\Models\AirportPickup ;
+use App\Models\CeoGreeting ;
 class SiteController extends Controller
 {
     public function placeholderImage($size = null){
@@ -142,9 +143,6 @@ class SiteController extends Controller
         // dd($universityAddmissions);
         return view('h-and-h.pages.services.findUniversity',compact('universityAddmissions'));
     }
-
-
-
     // Student Counsellings 
     public function ScounsellinG()
     {
@@ -152,10 +150,6 @@ class SiteController extends Controller
         //  dd($StudentCounselling);
         return view('h-and-h.pages.services.studentcounciling',compact('StudentCounselling'));
     }
-
-
-
-
 
         // Visha Application
         public function vishaApplication()
@@ -182,5 +176,12 @@ class SiteController extends Controller
         }
 
 
+
+        public function ceoIndex()
+        {
+            $greetingss = CeoGreeting ::all();
+            // dd($greetings);
+            return view('h-and-h.pages.about.ceo', compact('greetingss'));
+        }
 
 }

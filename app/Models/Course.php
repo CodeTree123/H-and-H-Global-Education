@@ -13,6 +13,8 @@ class Course extends Model
         'university_id',
         'name',
         'description',
+        'date',
+
         'course_type_id',
         'study_level_id',
         'duration',
@@ -20,7 +22,8 @@ class Course extends Model
         'price',
         'tution_fees',
         'overview',
-        'icon'
+        'icon',
+        'key_facts'
     ];
 
 

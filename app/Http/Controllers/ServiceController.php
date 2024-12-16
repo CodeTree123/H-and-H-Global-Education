@@ -33,7 +33,7 @@ class ServiceController extends Controller
 
     public function whyUs()
     {
-        return view('h-and-h.pages.whyUs');
+        return view('h-and-h.pages.why_us');
     }
 
 

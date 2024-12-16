@@ -76,9 +76,9 @@
                     <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown">ABOUT</a>
                     <ul class="dropdown-menu" aria-labelledby="newsEventsDropdown">
                         <li><a class="dropdown-item"  href="{{ route('why.us') }}">Why Us</a></li>
-                        <li><a class="dropdown-item" href="{{ route('greetings.ceo') }}">Greetings from CEO</a></li>
+                        <li><a class="dropdown-item" href="{{ route('greetings.from.ceo') }}">Greetings from CEO</a></li>
                         <li><a class="dropdown-item" href="{{ route('our.team') }}">Our Team</a></li>
-                        <li><a class="dropdown-item" href="{{ route('news.blog') }}">News (Blogs)</a></li>
+                        <li><a class="dropdown-item" href="{{ route('news.blog') }}">News Blogs</a></li>
                         <li><a class="dropdown-item"href="{{ route('event') }}">Events</a></li>
                     </ul>
                 </li>

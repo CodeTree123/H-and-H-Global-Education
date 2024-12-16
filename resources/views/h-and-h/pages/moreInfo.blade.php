@@ -6,8 +6,6 @@
 <br>
 <br>
 <br>
-
-
 <style>
   .info-card-title {
     display: flex; /* Use flexbox for alignment */
@@ -218,12 +216,11 @@
         </div>
         <div
           class="col-md-6 key-facts text-start mb-5"
-          style="border-radius: 15px"
-        >
+          style="border-radius: 15px">
           <div class="p-3">
-            <h3 class="">Key Facts</h3>
+            <h3 class="">Key Facts : {{ $course->key_facts }} </h3>
             <h4 class="mt-5">
-              <i class="fas fa-graduation-cap iconInfo"></i> Degree: BS Kinesiology
+              <i class="fas fa-graduation-cap iconInfo"></i> Degree:  {{$course->studyLevel->name}}
             </h4>
             <h4 class="mt-5">
               <i class="fas fa-clock iconInfo"></i> Duration: {{$course->duration}}
@@ -231,10 +228,16 @@
             <h4 class="mt-5">
             <i class="fas fa-arrow-right iconInfo"></i> Pathways Available: {{ $course->pathway_available }}
             </h4>
+
+
             <h4 class="mt-5">
-              <i class="fas fa-calendar-alt iconInfo"></i> Start Dates: August |
-              January | May
-            </h4>
+              <i class="fas fa-calendar-alt iconInfo"></i> 
+              Course Date: {{ \Carbon\Carbon::parse($course->date)->format('F d, Y') }}
+
+              
+          </h4>
+          
+          
             <a  href="{{ route('freecounselling.form') }}"  class=" btn btn-info btn-info-light mt-3 w-50">
               Book A Counselling Session Now
          </a>

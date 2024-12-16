@@ -49,7 +49,7 @@ class UniversityController extends Controller
             $request->university_banner->move(public_path('banners'), $bannerName);
         }
 
-        University::create([
+        $uni = University::create([
             'country_id' => $request->country_id,
             'name' => $request->name,
 
@@ -62,6 +62,8 @@ class UniversityController extends Controller
             'university_banner' => $bannerName,
             'image' => $imageName,
         ]);
+        $uni->slug = $request->name;
+        $uni->save();
 
         return redirect()->route('universities.index')->with('success', 'University added successfully.');
     }
@@ -140,9 +142,15 @@ class UniversityController extends Controller
 
 
     // Single university page
-    public function show($id)
+    public function show($identifier)
     {
-        $university = University::find($id);
+        $university = University::where('id', $identifier)
+        ->orWhere('slug', $identifier)
+        ->first();
+        if (!$university) {
+            abort(404, 'University not found');
+        }
         return view('h-and-h.pages.university',compact('university')); // Returns the university details view
     }
+    
 }

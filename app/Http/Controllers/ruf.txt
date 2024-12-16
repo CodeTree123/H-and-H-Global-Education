@@ -1,0 +1,6 @@
+   public function ceoIndex()
+        {
+            $greetingss = CeoGreeting ::all();
+            // dd($greetings);
+            return view('h-and-h.pages.about.ceo', compact('greetingss'));
+        }

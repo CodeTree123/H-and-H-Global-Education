@@ -48,6 +48,10 @@ Route::controller('TicketController')->prefix('ticket')->name('ticket.')->group(
     Route::get('/student/counselling', 'ScounsellinG')->name('studentCounselling');
     Route::get('/visa/application', 'vishaApplication')->name('vishaApplications');
     Route::get('/finding/accommodation', 'Accommodationfrontend')->name('AccommodationfrontendRoute');
+    Route::get('/ceo', 'ceoIndex')->name('greetings.from.ceo');
+
+
+
     Route::get('/airport/pickup', 'AirportPickupFrontend')->name('airport.Pickup');
 
 
@@ -223,8 +227,8 @@ Route::get('/university-destination/{id}', [App\Http\Controllers\countryDestinat
 
 
 
-// songle university route 
-Route::get('/university/pages/{id}', [App\Http\Controllers\UniversityController::class, 'show'])->name('university.show');
+// single university route 
+Route::get('/university/pages/{identifier}', [App\Http\Controllers\UniversityController::class, 'show'])->name('university.show');
 
 
 // Location routes

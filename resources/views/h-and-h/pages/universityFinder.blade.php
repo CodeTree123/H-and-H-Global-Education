@@ -84,7 +84,7 @@
                 style="background-color: #D0142C; color: white; border-radius: 10px; padding: 10px 20px; text-decoration: none; font-weight: bold;">
                     Book A Free Counselling
                 </a>
-                <a href="{{ route('university.show',$university->id) }}" 
+                <a href="{{ route('university.show',$university->slug ?? $university->id) }}" 
                 class="unique-btn learn-more-btn" 
                 style="border: 2px solid #D0142C; border-radius: 10px; padding: 10px 20px; text-decoration: none; font-weight: bold;">
                     Learn More

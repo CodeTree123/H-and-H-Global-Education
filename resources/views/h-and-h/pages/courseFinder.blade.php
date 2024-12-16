@@ -459,7 +459,6 @@
                     <!-- COURSES----------------------------------------- -->
     <h4 class="mb-4 mt-5">Available Courses</h4>
     <div class="course-card">
-
          @if($findCourses->isEmpty())
         <p>No courses available for this university.</p>
         @else
@@ -472,11 +471,10 @@
                             <img style="width: 150px; margin-bottom: 8px;" src="{{ @asset('images/' . $findCourse->university->image) }}" alt="{{ $university->image }}">
                         </a>
                         <div class="d-flex align-items-center">
-                            <a href="#" class="me-2">{{ $findCourse->name }}</a>
+                            <a href="{{ route('course.single', $findCourse->slug ?? $findCourse->id) }}"  class="me-2">{{ $findCourse->name }}</a>
                             <i class="fa-solid fa-share-from-square"></i>
                         </div>
                     </h5>
-
                     <p class="card-text">{!! $findCourse->description !!}</p>
 
                         <small>
@@ -538,7 +536,6 @@
    class=" apply-now-btn mt-3 w-75">
    Apply Now
 </a>
-
 <!-- More Info Button -->
 <a href="{{ route('course.single', $findCourse->slug ?? $findCourse->id) }}" 
    class=" more-info-btn mt-2 w-75">

@@ -18,13 +18,12 @@
 
 <div class="banner-section" id="banner-section">
     @foreach($banners as $banner)
-    <div class="banner-content" style="position: relative; height: 100vh; width: 100%;">
-        <div class="banner-bg" style="background-image: url('{{ asset('storage/' . $banner->image) }}'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; right: 0; bottom: 0; filter: blur(5px); z-index: -1;"></div>
-        <h1 id="slider-heading">{{$banner->title}}</h1>
-        <p id="slider-text">{{$banner->description}}</p>
-        <a href="{{ route('freecounselling.form') }}" class="btn study-button mt-5" style="background-color: #D0142C; color: white; border-radius: 50px;">
-            Book A Free Counselling Session Now 
-        </a>
+    <div class="banner-content" style="background-image: url('{{ asset('storage/' . $banner->image) }}'); background-size: cover; background-position: center; height: 100vh; width: 100%;">
+      <h1 id="slider-heading">{{$banner->title}}</h1>
+      <p id="slider-text">{{$banner->description}}</p>
+      <a href="{{ route('freecounselling.form') }}" class="btn study-button mt-5" style="background-color: #D0142C; color: white; border-radius: 50px;">
+    Book A Free Counselling Session Now 
+</a>
     </div>
     @endforeach
     <button class="left-arrow">&larr;</button>
@@ -279,14 +278,8 @@
         </div>
     @endforeach
 </div>
-
-
     </div>
 </div>
-
-
-
-
 <!-- Checkout our latest Posts -->
 <h2 class="text-center mt-5" style="color: #D0142C;">Find out latest study aboard news</h2>
 <div class="partner-section-container container">
@@ -312,11 +305,19 @@
         @foreach ($partnerUniversities as $partner)
             <div class="slide">
                 <a href="{{ $partner->link ?? '#' }}">
-                    <img style="height:150px;" src="{{ asset('storage/' . $partner->image) }}" alt="University {{ $loop->iteration }}">
+                    <img class="slider-img" src="{{ asset('storage/' . $partner->image) }}" alt="University {{ $loop->iteration }}">
                 </a>
             </div>
         @endforeach
     </div>
+    <style>
+        .slider-img {
+            height: 150px;
+            width: 100%;
+            object-fit: contain; /* Ensure the image scales within its container without cropping */
+        }
+    </style>
+    
     <button class="prev-btn">&#10094;</button>
     <button class="next-btn">&#10095;</button>
 </div>

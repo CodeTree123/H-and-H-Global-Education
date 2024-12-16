@@ -13,11 +13,10 @@
                     </h2>
                     <div id="collapseUK1" class="accordion-collapse collapse" aria-labelledby="headingUK1">
                         <div class="accordion-body footer-address">
-                            <p>2nd Floor, 16 St Clare St, London EC3N 1LQ, UK.</p>
-                            <p>+442073779630</p>
-                            <p><a href="mailto:info@Global Educationassociates.co.uk">info@Global Educationassociates.co.uk</a></p>
-                            <p>Monday – Friday: 9.00 AM – 5.30 PM</p>
-                            <p><a href="#">Visit Head Office >></a></p>
+                            <p>
+                            House#2C, Road#19, Nikunja 2, Khilkhet, Dhaka, Bangladesh</p>
+                            <p>01732-562129</p>
+                          
                         </div>
                     </div>
                 </div>
@@ -32,11 +31,10 @@
                     </h2>
                     <div id="collapseUK2" class="accordion-collapse collapse" aria-labelledby="headingUK2">
                         <div class="accordion-body footer-address">
-                            <p>2nd Floor, 10 St Clare St, London EC3N 1LQ, UK.</p>
-                            <p>+442073779640</p>
-                            <p><a href="mailto:branch@Global Educationassociates.co.uk">branch@Global Educationassociates.co.uk</a></p>
-                            <p>Monday – Friday: 9.00 AM – 5.30 PM</p>
-                            <p><a href="#">Visit Branch Office >></a></p>
+                            <p>816, Al Hamra Shopping City, 8th Floor, Zindabazar, Sylhet, Bangladesh
+                            </p>
+                            <p>01791-552986</p>
+                          
                         </div>
                     </div>
                 </div>
@@ -44,17 +42,14 @@
                 <div class="accordion-item col-mb-4 mb-4">
                     <h2 class="accordion-header" id="headingUK2">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUK3" aria-expanded="false" aria-controls="collapseUK3">
-                            <img src="https://cdn.britannica.com/90/7490-050-5D33348F/Flag-China.jpg" alt="Bangladesh Flag" class="flag-icon"> <!-- Bangladesh Flag -->
-                            <span class="mx-3">China</span>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/800px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="Bangladesh Flag" class="flag-icon"> <!-- Bangladesh Flag -->
+                            <span class="mx-3">UK</span>
                         </button>
                     </h2>
                     <div id="collapseUK3" class="accordion-collapse collapse" aria-labelledby="headingUK2">
                         <div class="accordion-body footer-address">
-                            <p>2nd Floor, 10 St Clare St, London EC3N 1LQ, UK.</p>
-                            <p>+442073779640</p>
-                            <p><a href="mailto:branch@Global Educationassociates.co.uk">branch@Global Educationassociates.co.uk</a></p>
-                            <p>Monday – Friday: 9.00 AM – 5.30 PM</p>
-                            <p><a href="#">Visit Branch Office >></a></p>
+                            <p>Unit 107, 8-10 Greatorex Street London, London, United Kingdom</p>
+                            <p>+44 7969 553031</p>
                         </div>
                     </div>
                 </div>
@@ -63,100 +58,18 @@
                 <div class="accordion-item col-mb-4 mb-4">
                     <h2 class="accordion-header" id="headingUK4">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUK4" aria-expanded="false" aria-controls="collapseUK4">
-                            <img src="https://cdn.britannica.com/54/5054-050-8EC06097/Flag-Ghana.jpg" alt="Bangladesh Flag" class="flag-icon"> <!-- Bangladesh Flag -->
-                            <span class="mx-3">Gana</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQequvUVjcEv1hl7r1Q3_XkwJ90XOOi76RvfQ&s" alt="Bangladesh Flag" class="flag-icon"> <!-- Bangladesh Flag -->
+                            <span class="mx-3">China</span>
                         </button>
                     </h2>
                     <div id="collapseUK4" class="accordion-collapse collapse" aria-labelledby="headingUK2">
                         <div class="accordion-body footer-address">
-                            <p>2nd Floor, 10 St Clare St, London EC3N 1LQ, UK.</p>
+                            <p>Unit 2002 Centry Haohong Commercial Plaza Jingkai District Yunnan Kunming City China</p>
                             <p>+442073779640</p>
-                            <p><a href="mailto:branch@Global Educationassociates.co.uk">branch@Global Educationassociates.co.uk</a></p>
-                            <p>Monday – Friday: 9.00 AM – 5.30 PM</p>
-                            <p><a href="#">Visit Branch Office >></a></p>
+                        
                         </div>
                     </div>
                 </div>
-
-                <!-- Accordion Item 3 -->
-                <div class="accordion-item col-mb-4 mb-4">
-                    <h2 class="accordion-header" id="headingUK3">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUK5" aria-expanded="false" aria-controls="collapseUK5">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="India Flag" class="flag-icon"> <!-- India Flag -->
-                            <span class="mx-3">India - Jaipur</span>
-                        </button>
-                    </h2>
-                    <div id="collapseUK5" class="accordion-collapse collapse" aria-labelledby="headingUK3">
-                        <div class="accordion-body footer-address">
-                            <p>2nd Floor, 10 St Clare St, London EC3N 1LQ, UK.</p>
-                            <p>+442073779640</p>
-                            <p><a href="mailto:branch@Global Educationassociates.co.uk">branch@Global Educationassociates.co.uk</a></p>
-                            <p>Monday – Friday: 9.00 AM – 5.30 PM</p>
-                            <p><a href="#">Visit Branch Office >></a></p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Accordion Item 3 -->
-                <div class="accordion-item col-mb-4 mb-4">
-                    <h2 class="accordion-header" id="headingUK8">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUK8" aria-expanded="false" aria-controls="collapseUK8">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="India Flag" class="flag-icon"> <!-- India Flag -->
-                            <span class="mx-3">Other Branch</span>
-                        </button>
-                    </h2>
-                    <div id="collapseUK8" class="accordion-collapse collapse" aria-labelledby="headingUK3">
-                        <div class="accordion-body footer-address">
-                            <p>2nd Floor, 10 St Clare St, London EC3N 1LQ, UK.</p>
-                            <p>+442073779640</p>
-                            <p><a href="mailto:branch@Global Educationassociates.co.uk">branch@Global Educationassociates.co.uk</a></p>
-                            <p>Monday – Friday: 9.00 AM – 5.30 PM</p>
-                            <p><a href="#">Visit Branch Office >></a></p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="accordion-item col-mb-4 mb-4">
-                    <h2 class="accordion-header" id="headingUK8">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUK9" aria-expanded="false" aria-controls="collapseUK9">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="India Flag" class="flag-icon"> <!-- India Flag -->
-                            <span class="mx-3">Other Branch</span>
-                        </button>
-                    </h2>
-                    <div id="collapseUK9" class="accordion-collapse collapse" aria-labelledby="headingUK3">
-                        <div class="accordion-body footer-address">
-                            <p>2nd Floor, 10 St Clare St, London EC3N 1LQ, UK.</p>
-                            <p>+442073779640</p>
-                            <p><a href="mailto:branch@Global Educationassociates.co.uk">branch@Global Educationassociates.co.uk</a></p>
-                            <p>Monday – Friday: 9.00 AM – 5.30 PM</p>
-                            <p><a href="#">Visit Branch Office >></a></p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="accordion-item col-mb-4 mb-4">
-                    <h2 class="accordion-header" id="headingUK8">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUK10" aria-expanded="false" aria-controls="collapseUK10">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="India Flag" class="flag-icon"> <!-- India Flag -->
-                            <span class="mx-3">Other Branch</span>
-                        </button>
-                    </h2>
-                    <div id="collapseUK10" class="accordion-collapse collapse" aria-labelledby="headingUK3">
-                        <div class="accordion-body footer-address">
-                            <p>2nd Floor, 10 St Clare St, London EC3N 1LQ, UK.</p>
-                            <p>+442073779640</p>
-                            <p><a href="mailto:branch@Global Educationassociates.co.uk">branch@Global Educationassociates.co.uk</a></p>
-                            <p>Monday – Friday: 9.00 AM – 5.30 PM</p>
-                            <p><a href="#">Visit Branch Office >></a></p>
-                        </div>
-                    </div>
-                </div>
-              
-              
             </div>
         </div>
     </div>
